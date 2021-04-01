@@ -34,150 +34,6 @@ padding: 50px 0;
 background-color: var(--secondary-100);
 }
 
- /* Flex */
-
-/* Display */
-.fx-box {
-    display: flex;
-}
-/* Direction */
-.fx-row {
-    flex-direction: row;
-}
-.fx-row-reverse{
-    flex-direction: row-reverse;
-}
-.fx-col {
-    flex-direction: column;
-}
-.fx-col-reverse {
-    flex-direction: column-reverse;
-}
-/* Wrap */
-.fx-wrap{
-    flex-wrap: wrap;
-}
-.fx-nowrap{
-    flex-wrap: nowrap;
-}
-.fx-wrap-reverse{
-    flex-wrap: wrap-reverse;
-}
-/* Justify Content */
-.fx-jc-center {
-    justify-content: center;
-}
-.fx-jc-start {
-    justify-content: flex-start;
-}
-.fx-jc-end {
-    justify-content: flex-end;
-}
-.fx-jc-space-between {
-    justify-content: space-between;
-}
-.fx-jc-space-around {
-    justify-content: space-around;
-}
-.fx-jc-space-evenly {
-    justify-content: space-evenly;
-}
-/* Justify Content */
-.fx-ji-center {
-    justify-items: center;
-}
-.fx-ji-start {
-    justify-items: flex-start;
-}
-.fx-ji-end {
-    justify-items: flex-end;
-}
-.fx-ji-space-between {
-    justify-items: space-between;
-}
-.fx-ji-space-around {
-    justify-items: space-around;
-}
-.fx-ji-space-evenly {
-    justify-items: space-evenly;
-}
-/* Justify self */
-.fx-js-center {
-    justify-self: center;
-}
-.fx-js-start {
-    justify-self: flex-start;
-}
-.fx-js-end {
-    justify-self: flex-end;
-}
-.fx-js-space-between {
-    justify-self: space-between;
-}
-.fx-js-space-around {
-    justify-self: space-around;
-}
-.fx-js-space-evenly {
-    justify-self: space-evenly;
-}
-/* Align Items */
-.fx-ai-center {
-    align-items: center;
-}
-.fx-ai-stretch {
-    align-items: stretch;
-}
-.fx-ai-flex-start {
-    align-items: flex-start;
-}
-.fx-ai-flex-end {
-    align-items: flex-end;
-}
-.fx-ai-baseline {
-    align-items: baseline;
-}
-/*   Align Self */
-.fx-as-auto {
-    align-self: auto;
-}
-.fx-as-center {
-    align-self: center;
-}
-.fx-as-stretch {
-    align-self: stretch;
-}
-.fx-as-flex-start {
-    align-self: flex-start;
-}
-.fx-as-flex-end {
-    align-self: flex-end;
-}
-.fx-as-baseline {
-    align-self: baseline;
-}
-/* Align Content */
-.fx-ac-stretch {
-    align-content: stretch;
-}
-.fx-ac-center {
-    align-content: center;
-}
-.fx-ac-start {
-    align-content: flex-start;
-}
-.fx-ac-end {
-    align-content: flex-end;
-}
-.fx-ac-space-between {
-    align-content: space-between;
-}
-.fx-ac-space-around {
-    align-content: space-around;
-}
-.fx-items-center {
-    justify-content: center;
-    align-items: center;
-}
 /* Spacing */
 .m-1{
     margin: 0.5em;
@@ -206,25 +62,35 @@ a:-webkit-any-link {
 }
 
 
-.navbar{
+.topnav{
     background-color:var(--white);
     height: 72px;
     border-bottom: 1px solid var(--primary-blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+    align-items: center;
 }
 
-.navbar a,
-.navbar button{
- font-size: 1em;
- text-transform: uppercase;
+.section-intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+    align-items: center;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+    align-items: start;
 }
 
-.navbar a:hover{
-color: var(--primary-darker);
-transform: scale(1.1);
+.quickLinks{
+    display: flex;
+    flex-direction: column;
+
 }
-.navbar button:hover{
-    transform: scale(1.1);
-    }
+
 
 .button{
     background-color: var(--primary-blue);
@@ -262,6 +128,7 @@ footer{
     padding: 1em;
 }
 footer h2,
+footer h3,
 footer a,
 footer p{
     color: var(--white);
@@ -313,4 +180,53 @@ footer p{
     display: none;
     padding: 6px 12px;
     border-top: none;
+  }
+
+  
+  .topnav {
+    overflow: hidden;
+    background-color: var(--white);
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: var(--primary-darker);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: var(--white); ;
+    color:var(--primary-blue);
+  }
+  
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav a , .topnav button{display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a ,
+    .topnav.responsive button{
+      float: none;
+      display: block;
+      text-align: right;
+    }
   }

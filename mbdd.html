@@ -16,23 +16,28 @@
   </head>
 
   <body>
-    <div #navbar class="navbar fx-box fx-row fx-jc-space-between fx-ai-center">
+    <div class="topnav" id="myTopnav">
       <img
         src="https://static.tcrecoveries.co.za/static/template/images/logo.png"
         alt="Logo"
         height="50"
         class="m-1"
+        href="#home"
       />
-      <div class="fx-box fx-row fx-jc-space-between fx-ai-center">
-        <a href="" class="m-2">Home</a>
-        <a href="" class="m-2">FAQ</a>
-        <a href="" class="m-2">Products</a>
-        <button class="m-2 button" href="">Sign In</button>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#products">Products</a>
+        <button class="button">Sign in</button>
+        <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
-    </div>
+      
+    
+
     <main #main>
       <section id="introSection">
-        <div class="fx-box fx-row fx-jc-space-between fx-ai-center width-50">
+        <div class="section-intro width-50">
           <div style="flex-grow: 3">
             <h1>Transaction Capital</h1>
             <p>Get Funeral cover from as little as R25 for R10 000</p>
@@ -47,7 +52,7 @@
           </div>
         </div>
       </section>
-      <section id="coverSection">
+      <section id="products">
         <div class="tab width-50">
           <h2>Get a Quote</h2>
           <button
@@ -66,38 +71,20 @@
         </div>
 
         <div id="Gadget" class="tabcontent width-50">
-          <h3>Gadget Cover</h3>
+          <h3>Coming Soon</h3>
+          <p><aref="#footer" h>Sign up to our Newsletter</a> to find out when we launch</p>
         </div>
       </section>
       <section id="claimSection">Section 4</section>
     </main>
     <footer id="footer">
-      <div class="width-50">
-        <div>
-          <h2>Newsletter</h2>
-          <p>
-            Keep up with our always upcoming news and updates. Enter your e-mail
-            and subscribe to our newsletter.
-          </p>
-          <div class="fx-box fx-col">
-            <input
-              style="margin-bottom: 1em"
-              placeholder="Email Address"
-              aria-label="Email Address"
-            />
-            <button
-              class="button-secondary fx-as-flex-end"
-              aria-label="Subscribe to Newsletter"
-            >
-              Subscribe
-            </button>
-          </div>
-        </div>
-        <div class="fx-box fx-row fx-jc-space-between fx-ai-start">
-          <div style="flex-grow: 3">
+      <div >
+        
+        <div class="links">
+          <div style="flex-grow: 2">
             <h2>Quicklinks</h2>
             <hr />
-            <div class="fx-box fx-col">
+            <div class="quickLinks">
               <a href="" class="m-1">Our Products</a>
               <a href="" class="m-1">Contact Us</a>
               <a href="" class="m-1">Covers</a>
@@ -108,13 +95,32 @@
             <h2>Contact Us</h2>
             <hr />
             <p>342 Jan Smuts Avenue Hyde Park , 2196</p>
+              <h3>Newsletter</h3>
+              <p style="width: 50%;">
+                Keep up with our always upcoming news and updates. Enter your e-mail
+                and subscribe to our newsletter.
+              </p>
+              <div style="width: 50%;" class="fx-box fx-col">
+                <input
+                  style="margin-bottom: 1em"
+                  placeholder="Email Address"
+                  aria-label="Email Address"
+                />
+                <button
+                  class="button-secondary fx-as-flex-end"
+                  aria-label="Subscribe to Newsletter"
+                >
+                  Subscribe
+                </button>
+              </div> 
           </div>
-        </div>
 
+        </div>
         <div>
           <i class="fab fa-facebook-square text-light text-size-2 m-1"></i>
           <i class="fab fa-linkedin text-light text-size-2 m-1"></i>
         </div>
+       
         <p class="copyright m-2">
           © 2021 A Product of Transaction Capital. All Rights Reserved.
         </p>
@@ -122,6 +128,15 @@
     </footer>
     <script src="js/scripts.js"></script>
     <script>
+
+      function openMenu() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
       function openCity(evt, cityName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName('tabcontent');

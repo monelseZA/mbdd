@@ -62,7 +62,7 @@
     min-width: 8em;
 }
 
-.button-secondary {
+.secondary-button {
     background-color: var(--white);
     color: var(--primary-blue);
     border-radius: 8px;
@@ -197,6 +197,20 @@ input {
     width: 100%;
     height: 30px;
 }
+textarea{
+     border-radius: 8px;
+    margin: 4px auto;
+    width: 100%;
+}
+.contact-row,.contact-btn-row{
+    display:flex;
+    flex-direction: row;
+}
+
+.contact-btn-row{
+    align-content: center;
+    justify-content: space-between;
+}
 
 .checkbox input {
     position: absolute;
@@ -274,6 +288,9 @@ input {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top:0;
+    width:100%;
 }
 
 .topnav-menu {
@@ -355,6 +372,9 @@ footer p {
 }
 
 @media screen and (max-width: 600px) {
+    .topnav{
+        flex-direction: column;
+    }
     .topnav-menu a {
         display: none;
     }

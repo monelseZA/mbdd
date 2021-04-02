@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
-
     <title>MBDD</title>
     <meta name="description" content="MBDD design" />
     <meta name="author" content="Monique" />
@@ -13,26 +10,22 @@
     <link rel="stylesheet" href="./styles.css" />
     <script src="https://kit.fontawesome.com/4cdb9d46b3.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <div class="topnav" id="mytopnav">
         <img src="https://static.tcrecoveries.co.za/static/template/images/mbd_logo.png" alt="Logo" height="50" class="m-1" href="#home" />
+       
         <div class="topnav-menu" id="mytopnav-menu">
-            <a href="#products">Products</a>
-            <a href="#contact">Contact Us</a>
-            <a href="#Subscribe">Subscribe</a>
-            <a href="#new">What's New</a>
-            <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+         <a href="javascript:void(0);" class="icon" onclick="openMenu()">
                 <i class="fa fa-bars"></i>
             </a>
+            <a href="#products">Products</a>
+            <a href="#contact"  onclick="window.dialog.showModal();">Contact Us</a>
+            <a href="#Subscribe">Subscribe</a>
+            <a href="#new">What's New</a>
         </div>
     </div>
-
-
-
     <main #main>
         <section id="introSection">
-
             <h1>Digital Debt Collection</h1>
             <h2>Giving you power over your debt.</h2>
             <h3>Providing you with tools to manage your account on our user friendly self service portal</h3>
@@ -173,5 +166,23 @@
         document.getElementById('defaultOpen').click();
     </script>
 </body>
-
+<dialog id="dialog">
+<h2>Contact Us</h2>
+<form method="dialog">
+    <div class="contact-row">
+        <input placeholder="First Name" />
+        <input placeholder="Surname" />
+    </div>
+    <div class="contact-row">
+        <input placeholder="Phone Number" />
+        <input placeholder="Email Address" />
+    </div>
+    <input placeholder="Subject" />
+    <textarea placeholder="Message" rows="4"></textarea>
+    <div class="contact-btn-row">
+        <button class="secondary-button">Close</button>
+        <button class="primary-button">Send</button>
+    </div>
+  </form>
+</dialog>
 </html>

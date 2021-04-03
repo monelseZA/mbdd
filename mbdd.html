@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <title>MBDD</title>
@@ -10,16 +11,17 @@
     <link rel="stylesheet" href="./styles.css" />
     <script src="https://kit.fontawesome.com/4cdb9d46b3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="topnav" id="mytopnav">
         <img src="https://static.tcrecoveries.co.za/static/template/images/mbd_logo.png" alt="Logo" height="50" class="m-1" href="#home" />
-       
+        <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
         <div class="topnav-menu" id="mytopnav-menu">
-         <a href="javascript:void(0);" class="icon" onclick="openMenu()">
-                <i class="fa fa-bars"></i>
-            </a>
+
             <a href="#products">Products</a>
-            <a href="#contact"  onclick="window.dialog.showModal();">Contact Us</a>
+            <a href="#contact" onclick="window.dialog.showModal();">Contact Us</a>
             <a href="#Subscribe">Subscribe</a>
             <a href="#new">What's New</a>
         </div>
@@ -40,12 +42,13 @@
                 <div class="checkbox">
                     <input type="checkbox" id="Communications" name="Communications" value="Communications">
                     <span class="checkmark"></span>
-                    <label> I want to receive Communications related to other Transaction Capital Products and their affiliates</label>
+                    <p> I want to receive Communications related to other Transaction Capital Products and their affiliates</p>
                 </div>
+                <br/>
                 <div class="checkbox">
                     <input type="checkbox" id="Newsletter" name="Newsletter" value="Newsletter">
                     <span class="checkmark"></span>
-                    <label>General Newsletter</label>
+                    <p>General Newsletter</p>
                 </div>
                 <button class="primary-button"> Get Info</button>
             </div>
@@ -167,22 +170,23 @@
     </script>
 </body>
 <dialog id="dialog">
-<h2>Contact Us</h2>
-<form method="dialog">
-    <div class="contact-row">
-        <input placeholder="First Name" />
-        <input placeholder="Surname" />
-    </div>
-    <div class="contact-row">
-        <input placeholder="Phone Number" />
-        <input placeholder="Email Address" />
-    </div>
-    <input placeholder="Subject" />
-    <textarea placeholder="Message" rows="4"></textarea>
-    <div class="contact-btn-row">
-        <button class="secondary-button">Close</button>
-        <button class="primary-button">Send</button>
-    </div>
-  </form>
+    <h2>Contact Us</h2>
+    <form method="dialog">
+        <div class="contact-row">
+            <input placeholder="First Name" />
+            <input placeholder="Surname" />
+        </div>
+        <div class="contact-row">
+            <input placeholder="Phone Number" />
+            <input placeholder="Email Address" />
+        </div>
+        <input placeholder="Subject" />
+        <textarea placeholder="Message" rows="4"></textarea>
+        <div class="contact-btn-row">
+            <button class="secondary-button">Close</button>
+            <button class="primary-button">Send</button>
+        </div>
+    </form>
 </dialog>
+
 </html>

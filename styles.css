@@ -52,6 +52,10 @@
     padding: 3em;
 }
 
+button:focus {
+    outline: unset;
+}
+
 .primary-button {
     background-color: var(--primary-blue);
     color: var(--white);
@@ -197,17 +201,20 @@ input {
     width: 100%;
     height: 30px;
 }
-textarea{
-     border-radius: 8px;
+
+textarea {
+    border-radius: 8px;
     margin: 4px auto;
     width: 100%;
 }
-.contact-row,.contact-btn-row{
-    display:flex;
+
+.contact-row,
+.contact-btn-row {
+    display: flex;
     flex-direction: row;
 }
 
-.contact-btn-row{
+.contact-btn-row {
     align-content: center;
     justify-content: space-between;
 }
@@ -216,12 +223,14 @@ textarea{
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    height: 0;
-    width: 0;
+    height: 25px;
+    width: 25px;
+    z-index: 9;
 }
 
-.checkbox label {
+.checkbox p {
     padding-left: 30px;
+    margin: 0px;
 }
 
 .card p,
@@ -240,14 +249,14 @@ textarea{
 /* On mouse-over, add a grey background color */
 
 .checkbox:hover input~.checkmark {
-    background-color: #ccc;
+    background-color: var(--white);
 }
 
 
 /* When the checkbox is checked, add a blue background */
 
 .checkbox input:checked~.checkmark {
-    background-color: #2196F3;
+    background-color: var(--secondary-grey);
 }
 
 
@@ -274,7 +283,7 @@ textarea{
     top: 5px;
     width: 5px;
     height: 10px;
-    border: solid white;
+    border: solid var(--white);
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -289,8 +298,8 @@ textarea{
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    top:0;
-    width:100%;
+    top: 0;
+    width: 100%;
 }
 
 .topnav-menu {
@@ -313,7 +322,7 @@ textarea{
     color: var(--white);
 }
 
-.topnav-menu .icon {
+.topnav .icon {
     display: none;
 }
 
@@ -372,20 +381,22 @@ footer p {
 }
 
 @media screen and (max-width: 600px) {
-    .topnav{
-        flex-direction: column;
+    .topnav {
+        overflow: visible;
     }
     .topnav-menu a {
         display: none;
     }
-    .topnav-menu a.icon {
+    .topnav a.icon {
         float: right;
         display: block;
     }
+    .topnav-menu,
     .topnav-menu.responsive {
-        position: relative;
+        position: absolute;
+        top: 42px;
     }
-    .topnav-menu.responsive .icon {
+    .topnav.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
@@ -394,6 +405,7 @@ footer p {
         float: none;
         display: block;
         text-align: left;
+        width: 100vw;
     }
     .card {
         width: 70%;
